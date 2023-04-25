@@ -1,0 +1,20 @@
+{
+  "name": "music-festival-web",
+  "version": "1.0.0",
+  "description": "Musis Festival Web",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "author": "Juanjo Pareja",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0"
+  }
+}
