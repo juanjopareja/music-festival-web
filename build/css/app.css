@@ -356,6 +356,8 @@ h3 {
 
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -462,7 +464,7 @@ img {
   .festival-about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    gap: 5rem;
   }
 }
 
@@ -470,6 +472,12 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .festival-content {
+    margin-top: 0;
+  }
 }
 .festival-content h2 {
   margin-bottom: 2rem;
