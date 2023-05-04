@@ -1,0 +1,26 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.gallery {
+    padding: 5rem 0;
+    h3 {
+        text-align: center;
+    }
+}
+
+.image-gallery {
+    @include mix.reset-list;
+    @include mix.grid(2, 2rem);
+
+    @include mix.mobile { 
+        @include mix.grid(3, 2rem);
+    }
+
+    @include mix.tablet {
+        @include mix.grid(4, 2rem);
+    }
+
+    @include mix.desktop {
+        @include mix.grid(6, 2rem);
+    }
+}

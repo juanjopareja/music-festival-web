@@ -54,16 +54,26 @@ function images( done ) {
 }
 
 
+// JS
+function javascript( done ) {
+    src("src/js/**/*.js")
+        .pipe( dest("build/js") );
+    done();
+}
+
+
 // DEV
 function dev( done ) {
     watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", javascript);
     done();
 }
 
 
 // EXPORTS
 exports.css = css;
+exports.js = javascript;
 exports.images = images;
 exports.webpVersion = webpVersion;
 exports.avifVersion = webpVersion;
-exports.dev = parallel( images, webpVersion, avifVersion, dev );
+exports.dev = parallel( images, webpVersion, avifVersion, javascript, dev );
