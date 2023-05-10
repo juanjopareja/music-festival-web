@@ -1,6 +1,10 @@
 const { src, dest, watch, parallel } = require("gulp");
 
 
+// JS
+const terser = require("gulp-terser-js");
+
+
 // CSS
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
@@ -64,7 +68,10 @@ function images( done ) {
 // JS
 function javascript( done ) {
     src("src/js/**/*.js")
-        .pipe( dest("build/js") );
+        .pipe( sourcemaps.init() )
+        .pipe( terser() )
+        .pipe( sourcemaps.write(".") )
+        .pipe( dest("build/js") )
     done();
 }
 

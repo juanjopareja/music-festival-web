@@ -17,6 +17,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser-js": "^5.2.2",
     "postcss": "^8.4.23",
     "sass": "^1.62.0"
   },
